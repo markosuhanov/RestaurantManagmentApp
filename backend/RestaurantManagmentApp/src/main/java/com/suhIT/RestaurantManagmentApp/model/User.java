@@ -18,6 +18,7 @@ public class User {
     @Column(name = "role", nullable = false)
     private Role role;
     @OneToMany
+    @JoinColumn(name = "user_id")
     private List<Salary> salaries;
     private boolean active;
 
