@@ -1,12 +1,13 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 public class ItemCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
     private String name;
 
     public ItemCategory() {
@@ -24,11 +25,11 @@ public class ItemCategory {
         this.name = name;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 }

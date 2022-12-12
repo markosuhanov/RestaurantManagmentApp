@@ -1,12 +1,13 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 public class DrinkItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
     private String allergens;
     private int preparationTime;
 
@@ -19,11 +20,11 @@ public class DrinkItem {
         this.preparationTime = preparationTime;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
