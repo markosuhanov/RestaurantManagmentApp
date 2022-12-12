@@ -13,7 +13,6 @@ public class Salary {
     private Date startDate;
     private Date endDate;
     private boolean active;
-
     public Salary() {
     }
 
