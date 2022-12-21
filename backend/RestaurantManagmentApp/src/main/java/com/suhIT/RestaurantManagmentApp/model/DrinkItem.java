@@ -1,5 +1,7 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.UUID;
 
@@ -7,6 +9,7 @@ import java.util.UUID;
 public class DrinkItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Type(type = "uuid-char")
     private UUID id;
     private String allergens;
     private int preparationTime;

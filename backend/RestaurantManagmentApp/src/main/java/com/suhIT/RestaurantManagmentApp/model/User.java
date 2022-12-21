@@ -1,14 +1,18 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
+
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Type(type = "uuid-char")
     private UUID id;
     private String firstName;
     private String lastName;

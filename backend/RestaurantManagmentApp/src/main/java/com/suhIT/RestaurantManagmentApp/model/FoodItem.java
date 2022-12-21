@@ -1,5 +1,7 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +14,7 @@ public class FoodItem extends Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Type(type = "uuid-char")
     private UUID id;
 
     private String allergens;

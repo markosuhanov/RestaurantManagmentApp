@@ -1,5 +1,7 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.UUID;
 
@@ -8,6 +10,7 @@ public abstract  class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Type(type = "uuid-char")
     private UUID id;
     private String name;
     private String description;

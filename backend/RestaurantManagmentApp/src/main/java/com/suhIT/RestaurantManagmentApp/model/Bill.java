@@ -1,5 +1,7 @@
 package com.suhIT.RestaurantManagmentApp.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
@@ -9,6 +11,7 @@ public class Bill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Type(type = "uuid-char")
     private UUID id;
     @ManyToOne
     @JoinColumn(name = "waiter_id")
